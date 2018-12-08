@@ -15,19 +15,24 @@ function draw() {
 
     // draw a line from the middle of the screen
     line(0, playerMap.size / 2, playerMap.size, playerMap.size / 2);
+
+    // player.fire();
 }
 
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         player.walkUp();
     } else if (keyCode === DOWN_ARROW) {
-        // do stuff
         player.walkDown();
     } else if (keyCode === RIGHT_ARROW) {
-        // do stuff
+        player.walkRight();
     } else if (keyCode === LEFT_ARROW) {
-        // do stuff
+        player.walkLeft();
     }
+}
+
+function keyTyped() {
+    console.log(keyCode);
 }
 
 function mouseClicked() {
